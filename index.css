@@ -1,0 +1,138 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--Very-light-gray);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 245px;
+  height: 400px;
+  padding: 55px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--Very-light-gray);
+  margin: 0;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  color: var(--Transparent-white);
+  line-height: 2;
+}
+
+img {
+  width: 64px;
+}
+
+button {
+  background-color: var(--Very-light-gray);
+  width: 155px;
+  height: 50px;
+  border-radius: 25px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.sedans button{
+  color: var(--Bright-orange);
+}
+
+.suvs button{
+  color: var(--Dark-cyan);
+}
+
+.luxury button{
+  color: var(--Very-dark-cyan);
+}
+
+.sedans button:hover{
+  background-color: var(--Bright-orange);
+  color: white;
+  border-style: solid;
+  border-color: inherit;
+}
+.suvs button:hover{
+  background-color: var(--Dark-cyan);
+  color: white;
+  border-style: solid;
+  border-color: inherit;
+}
+.luxury button:hover{
+  background-color: var(--Very-dark-cyan);
+  color: white;
+  border-style: solid;
+  border-color: inherit;
+}
+
+.holder {
+  padding: 50px 0 5px 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sedans {
+  background-color: var(--Bright-orange);
+  border-radius: 20px 20px 0 0;
+}
+
+.suvs {
+  background-color: var(--Dark-cyan);
+}
+
+.luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 20px 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1150px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .holder {
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .sedans {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .suvs {
+    border-radius: 0;
+  }
+
+  .luxury {
+    border-radius: 0 20px 20px 0;
+  }
+}
